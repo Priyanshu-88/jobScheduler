@@ -1,0 +1,28 @@
+{
+  "name": "job-scheduler",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Distributed Job Scheduling Platform",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "db:generate": "npm run generate -w packages/database",
+    "db:migrate": "npm run migrate -w packages/database",
+    "db:seed": "npm run seed -w packages/database",
+    "db:studio": "npm run studio -w packages/database",
+    "start": "npm run dev:api",
+    "dev:api": "npm run dev -w apps/api",
+    "dev:worker": "npm run dev -w apps/worker",
+    "build:shared": "npm run build -w packages/shared",
+    "build:api": "npm run build -w apps/api",
+    "build:worker": "npm run build -w apps/worker",
+    "test": "npm run test --workspaces --if-present",
+    "test:api": "npm run test -w apps/api",
+    "test:worker": "npm run test -w apps/worker"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "@job-scheduler/worker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Standalone worker process for the job scheduler",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/main.ts",
+    "start": "node dist/main.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:concurrency": "jest --testPathPattern=concurrency"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.9.0",
+    "cron-parser": "^4.9.0",
+    "dotenv": "^16.4.0",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^22.0.0",
+    "@types/uuid": "^10.0.0",
+    "jest": "^29.7.0",
+    "prisma": "^6.9.0",
+    "ts-jest": "^29.2.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.0"
+  }
+}
